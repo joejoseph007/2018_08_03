@@ -1,0 +1,5 @@
+#!/bin/sh
+Xvfb :1 &
+sleep 2
+DISPLAY=:1 xfoil <controlfile.xfoil >outputfile.out
+kill -15 $!
